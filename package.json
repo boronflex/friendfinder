@@ -1,0 +1,22 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "friend finder homework application",
+  "main": "server.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boronflex/friendfinder.git"
+  },
+  "author": "kvp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/boronflex/friendfinder/issues"
+  },
+  "homepage": "https://github.com/boronflex/friendfinder#readme"
+}
