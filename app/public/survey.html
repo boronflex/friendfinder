@@ -21,7 +21,7 @@
       <br>
 
       <div class="text-center">
-        <a href="/tables"><button type="button" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-list-alt"></span> View Tables</button></a>
+        <a href="/tables"><button type="button" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-list-alt"></span> View Other Users</button></a>
         <a href="/"><button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span></button></a>
       </div>
     </div>
@@ -56,9 +56,11 @@
                     <span class="caret"></span>
                   </button>
                   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
+                    <li><a href="#">5-strongly agree</a></li>
+                    <li><a href="#">4-agree</a></li>
+                    <li><a href="#">3-somewhat agree</a></li>
+                    <li><a href="#">2-disagree</a></li>
+                    <li><a href="#">1-strongly agree</a></li>
                     <li role="separator" class="divider"></li>
                     <li><a href="#">Separated link</a></li>
                   </ul>
@@ -80,7 +82,7 @@
 
     <footer class="footer">
       <div class="container">
-        <p><a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API Wait List</a> | <a href="https://github.com/afhaque/HotRestaurant">GitHub Repo</a></p>
+        <p><a href="/api/friends">API Friends Link</a> | <a href="https://github.com/afhaque/HotRestaurant">GitHub Repo</a></p>
       </div>
     </footer>
 
@@ -101,21 +103,19 @@
       event.preventDefault();
 
       // Here we grab the form elements
-      var newReservation = {
-        customerName: $("#reserve-name").val().trim(),
-        phoneNumber: $("#reserve-phone").val().trim(),
-        customerEmail: $("#reserve-email").val().trim(),
-        customerID: $("#reserve-unique-id").val().trim()
+      var newFriend = {
+        newFriendName: $("#user-name").val().trim(),
+        picURL: $("#image-url").val().trim(),
       };
 
-      console.log(newReservation);
+      console.log(newFriend);
 
       // This line is the magic. It"s very similar to the standard ajax function we used.
       // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
       // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
       // depending on if a tables is available or not.
 
-      $.post("/api/tables", newReservation,
+      $.post("../data/friends", postNewFriend,
         function(data) {
 
           // If a table is available... tell user they are booked.
