@@ -20,11 +20,10 @@
         <!-- Reservation Page -->
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h4 class="panel-title">Survey Questions</h4>
-          </div>
+            <h1>Survey Questions:</h1>
           <div class="panel-body">
 
-            <h1>About You:</h1>
+            <h2>About You:</h2>
 
             <form role="form">
 
@@ -182,7 +181,10 @@
                   <option value="5">5 - Strongly Agree</option>
                 </select>
 
-              <button type="submit" class="btn btn-primary submit">Submit</button>
+              <br>
+              <br>
+
+              <button type="submit" class="btn btn-primary submit" style="width: 100%">Submit</button>
 
             </form>
 
@@ -218,19 +220,32 @@
 
       // Here we grab the form elements
       var newFriend = {
-        newFriendName: $("#user-name").val().trim(),
-        picURL: $("#image-url").val().trim(),
-        question1: $("#question1 option:selected").attr("value"),
-        question2: $("#question2 option:selected").attr("value"),
-        question3: $("#question3 option:selected").attr("value"),
-        question4: $("#question4 option:selected").attr("value"),
-        question5: $("#question5 option:selected").attr("value"),
-        question6: $("#question6 option:selected").attr("value"),
-        question7: $("#question7 option:selected").attr("value"),
-        question8: $("#question8 option:selected").attr("value"),
-        question9: $("#question9 option:selected").attr("value"),
-        question10: $("#question10 option:selected").attr("value")
+        name: $("#user-name").val().trim(),
+        image: $("#image-url").val().trim(),
+        scores: [
+          $("#question1").val(),
+          $("#question2").val(),
+          $("#question3").val(),
+          $("#question4").val(),
+          $("#question5").val(),
+          $("#question6").val(),
+          $("#question7").val(),
+          $("#question8").val(),
+          $("#question9").val(),
+          $("#question10").val()
+        ]
       };
+
+      // $("#question1 option:selected").attr("value"),
+      // $("#question2 option:selected").attr("value"),
+      // $("#question3 option:selected").attr("value"),
+      // $("#question4 option:selected").attr("value"),
+      // $("#question5 option:selected").attr("value"),
+      // $("#question6 option:selected").attr("value"),
+      // $("#question7 option:selected").attr("value"),
+      // $("#question8 option:selected").attr("value"),
+      // $("#question9 option:selected").attr("value"),
+      // $("#question10 option:selected").attr("value")
 
       console.log(newFriend);
 
@@ -239,8 +254,10 @@
       // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
       // depending on if a tables is available or not.
 
-      $.post("../data/friends", postNewFriend,
+      $.post("/api/friends", newFriend,
         function(data) {
+
+          /*
 
           // If data is complete show message that looking for friends
           if (data) {
@@ -252,11 +269,12 @@
             alert("Sorry you are on the wait list");
           }
 
+          */
+
           // Clear the form when submitting
           $("#user-name").val("");
           $("#image-url").val("");
-          $("#reserve-email").val("");
-          $("#reserve-unique-id").val("");
+          $("#question1 option:selected").val("");
 
         });
 
