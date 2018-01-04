@@ -206,19 +206,12 @@
 </body>
 </html>
 
-<!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
 <script type="text/javascript">
 
-
-    // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
-    // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
-    // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
-    // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
 
     $(".submit").on("click", function(event) {
       event.preventDefault();
 
-      // Here we grab the form elements
       var newFriend = {
         name: $("#user-name").val().trim(),
         image: $("#image-url").val().trim(),
@@ -236,23 +229,8 @@
         ]
       };
 
-      // $("#question1 option:selected").attr("value"),
-      // $("#question2 option:selected").attr("value"),
-      // $("#question3 option:selected").attr("value"),
-      // $("#question4 option:selected").attr("value"),
-      // $("#question5 option:selected").attr("value"),
-      // $("#question6 option:selected").attr("value"),
-      // $("#question7 option:selected").attr("value"),
-      // $("#question8 option:selected").attr("value"),
-      // $("#question9 option:selected").attr("value"),
-      // $("#question10 option:selected").attr("value")
-
       console.log(newFriend);
 
-      // This line is the magic. It"s very similar to the standard ajax function we used.
-      // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
-      // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
-      // depending on if a tables is available or not.
 
       $.post("/api/friends", newFriend,
         function(data) {
@@ -261,17 +239,17 @@
 
           // If data is complete show message that looking for friends
           if (data) {
-            alert("Yay! You are officially booked!");
+            show match modal
           }
 
           // If data is incomplete give a warning that all fields must be populated
           else {
-            alert("Sorry you are on the wait list");
+            alert("please fill out all forms");
           }
 
           */
 
-          // Clear the form when submitting
+          //clear and reset select boxes
           $("#user-name").val("");
           $("#image-url").val("");
           $("#question1 option:selected").val("");
