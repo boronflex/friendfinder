@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Reservation Page</title>
+  <title>Survey</title>
 
   <!-- Latest compiled and minified CSS & JS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -14,60 +14,173 @@
 
   <div class="container">
 
-    <div class="jumbotron">
-      <h1 class="text-center"><span class="glyphicon glyphicon-fire"></span> Friend Finder</h1>
-      <hr>
-      <h2 class="text-center">You successfully served the survey page</h2>
-      <br>
-
-      <div class="text-center">
-        <a href="/tables"><button type="button" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-list-alt"></span> View Other Users</button></a>
-        <a href="/"><button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span></button></a>
-      </div>
-    </div>
-
     <div class="row">
       <div class="col-lg-12">
 
         <!-- Reservation Page -->
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h4 class="panel-title">Personality Survey</h4>
+            <h4 class="panel-title">Survey Questions</h4>
           </div>
           <div class="panel-body">
+
+            <h1>About You:</h1>
 
             <form role="form">
 
               <div class="form-group">
-                <label for="user-name">Name</label>
+                <label for="user-name">Name (Required)</label>
                 <input type="text" class="form-control" id="user-name">
               </div>
 
               <div class="form-group">
-                <label for="image-url">Image-Url</label>
+                <label for="image-url">Profile Image URL (Required)</label>
                 <input type="text" class="form-control" id="image-url">
               </div>
 
+
               <!--question 1-->
 
-              <div class="dropdown">
-                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    Dropdown
-                    <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li><a href="#">5-strongly agree</a></li>
-                    <li><a href="#">4-agree</a></li>
-                    <li><a href="#">3-somewhat agree</a></li>
-                    <li><a href="#">2-disagree</a></li>
-                    <li><a href="#">1-strongly agree</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                  </ul>
-                </div>
+              <h3>Question 1</h3>
+              <h4>Your mind is a hive of bees</h4>
+
+              <select class="my_select_box" id="question1">
+                  <option selected disabled>Select an Option</option>
+                  <option value="1">1 - Strongly Disagree</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 - Strongly Agree</option>
+                </select>
+
 
               <!--question 2-->
 
+              <h3>Question 2</h3>
+              <h4>Your mind is a hive of bees</h4>
+
+              <select class="my_select_box" id="question2">
+                  <option selected disabled>Select an Option</option>
+                  <option value="1">1 - Strongly Disagree</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 - Strongly Agree</option>
+                </select>
+             
+
+              <!--question 3-->
+              
+              <h3>Question 3</h3>
+              <h4>Your mind is a hive of bees</h4>
+
+              <select class="my_select_box" id="question3">
+                  <option selected disabled>Select an Option</option>
+                  <option value="1">1 - Strongly Disagree</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 - Strongly Agree</option>
+                </select>
+              
+
+              <!--question 4-->
+              
+              <h3>Question 4</h3>
+              <h4>Your mind is a hive of bees</h4>
+
+              <select class="my_select_box" id="question4">
+                  <option selected disabled>Select an Option</option>
+                  <option value="1">1 - Strongly Disagree</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 - Strongly Agree</option>
+                </select>
+
+              <!--question 5-->
+              
+              <h3>Question 5</h3>
+              <h4>Your mind is a hive of bees</h4>
+
+              <select class="my_select_box" id="question5">
+                  <option selected disabled>Select an Option</option>
+                  <option value="1">1 - Strongly Disagree</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 - Strongly Agree</option>
+                </select>
+
+              <!--question 6-->
+              
+              <h3>Question 6</h3>
+              <h4>Your mind is a hive of bees</h4>
+
+              <select class="my_select_box" id="question6">
+                  <option selected disabled>Select an Option</option>
+                  <option value="1">1 - Strongly Disagree</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 - Strongly Agree</option>
+                </select>
+
+              <!--question 7-->
+              
+              <h3>Question 7</h3>
+              <h4>Your mind is a hive of bees</h4>
+
+              <select class="my_select_box" id="question7">
+                  <option selected disabled>Select an Option</option>
+                  <option value="1">1 - Strongly Disagree</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 - Strongly Agree</option>
+                </select>
+
+              <!--question 8-->
+              
+              <h3>Question 8</h3>
+              <h4>Your mind is a hive of bees</h4>
+
+              <select class="my_select_box" id="question8">
+                  <option selected disabled>Select an Option</option>
+                  <option value="1">1 - Strongly Disagree</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 - Strongly Agree</option>
+                </select>
+
+              <!--question 9-->
+              
+              <h3>Question 9</h3>
+              <h4>Your mind is a hive of bees</h4>
+
+              <select class="my_select_box" id="question9">
+                  <option selected disabled>Select an Option</option>
+                  <option value="1">1 - Strongly Disagree</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 - Strongly Agree</option>
+                </select>
+
+              <!--question 10-->
+
+              <h3>Question 10</h3>
+              <h4>Your mind is a hive of bees</h4>
+
+              <select class="my_select_box" id="question10">
+                  <option selected disabled>Select an Option</option>
+                  <option value="1">1 - Strongly Disagree</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 - Strongly Agree</option>
+                </select>
 
               <button type="submit" class="btn btn-primary submit">Submit</button>
 
@@ -94,6 +207,7 @@
 <!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
 <script type="text/javascript">
 
+
     // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
     // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
     // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
@@ -106,6 +220,16 @@
       var newFriend = {
         newFriendName: $("#user-name").val().trim(),
         picURL: $("#image-url").val().trim(),
+        question1: $("#question1 option:selected").attr("value"),
+        question2: $("#question2 option:selected").attr("value"),
+        question3: $("#question3 option:selected").attr("value"),
+        question4: $("#question4 option:selected").attr("value"),
+        question5: $("#question5 option:selected").attr("value"),
+        question6: $("#question6 option:selected").attr("value"),
+        question7: $("#question7 option:selected").attr("value"),
+        question8: $("#question8 option:selected").attr("value"),
+        question9: $("#question9 option:selected").attr("value"),
+        question10: $("#question10 option:selected").attr("value")
       };
 
       console.log(newFriend);
@@ -118,19 +242,19 @@
       $.post("../data/friends", postNewFriend,
         function(data) {
 
-          // If a table is available... tell user they are booked.
+          // If data is complete show message that looking for friends
           if (data) {
             alert("Yay! You are officially booked!");
           }
 
-          // If a table is available... tell user they on the waiting list.
+          // If data is incomplete give a warning that all fields must be populated
           else {
             alert("Sorry you are on the wait list");
           }
 
           // Clear the form when submitting
-          $("#reserve-name").val("");
-          $("#reserve-phone").val("");
+          $("#user-name").val("");
+          $("#image-url").val("");
           $("#reserve-email").val("");
           $("#reserve-unique-id").val("");
 
